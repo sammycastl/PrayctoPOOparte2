@@ -81,6 +81,6 @@ class ProyectoPOODenuncia {
         $direccion = readline();
         echo "Teléfono: ";
         $telefono = readline();
-        return new Persona($nombre, $edad, $sexo, $genero, $dni, $direccion, $telefono); // Agrega los demás argumentos necesarios para crear una Persona
+        return new Persona($nombre, $edad, $sexo, $genero, $dni, $direccion, $telefono); 
     }
 }
