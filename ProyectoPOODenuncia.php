@@ -83,5 +83,4 @@ class ProyectoPOODenuncia {
         $telefono = readline();
         return new Persona($nombre);
     }
-}// siii
-?>
+}

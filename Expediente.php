@@ -50,4 +50,3 @@ class Expediente {
         return $this->fecha;
     }
 }
-?>

@@ -81,4 +81,3 @@ class Denuncia {
         return $this->pruebas;
     }
 }
-?>
