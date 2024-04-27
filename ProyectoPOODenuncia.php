@@ -2,7 +2,7 @@
 class ProyectoPOODenuncia {
     public function __construct() {
         // Crear un usuario
-        $usuario = new Usuario("usuario1", "contraseña123");
+        $usuario = new Usuario("usuario1", "contraseña123", Rol::ADMINISTRADOR); // Agrega el tercer argumento con el rol del usuario
         // Mostrar un mensaje de bienvenida
         echo "¡Bienvenido al sistema de denuncias!\n";
         // Crear un expediente
@@ -49,7 +49,7 @@ class ProyectoPOODenuncia {
                 case 2:
                     // Listar denuncias en el expediente
                     echo "\nDenuncias en el expediente:\n";
-                    foreach ($expediente->getListaDenuncias() as $denuncia) {
+                    foreach ($expediente->obtenerDenuncias() as $denuncia) { // Corrige la llamada al método
                         echo "- Lugar: " . $denuncia->getLugar() . ", Detalles: " . $denuncia->getDetalles() . "\n";
                     }
                     break;
@@ -81,6 +81,6 @@ class ProyectoPOODenuncia {
         $direccion = readline();
         echo "Teléfono: ";
         $telefono = readline();
-        return new Persona($nombre);
+        return new Persona($nombre, $edad, $sexo, $genero, $dni, $direccion, $telefono); // Agrega los demás argumentos necesarios para crear una Persona
     }
 }
