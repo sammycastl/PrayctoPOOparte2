@@ -28,10 +28,13 @@ class PController {
             // Obtener los datos del formulario
             $lugar = $_POST['lugar'];
             $detalles = $_POST['detalles'];
-            // Obtener otros datos del formulario según sea necesario
+            $denunciante = $_POST['denunciante'];
+            $ofendido = $_POST['ofendido'];
+            $denunciado = $_POST['denunciado'];
+            $testigos = $_POST['testigos'];
             
             // Crear una nueva instancia de Denuncia con los datos recibidos
-            $denuncia = new Denuncia($lugar, $detalles);
+        $denuncia = new Denuncia($lugar, $detalles, $denunciante, $ofendido, $denunciado, $testigos);
             
             // Agregar la denuncia al expediente
             $expediente = new Expediente();
