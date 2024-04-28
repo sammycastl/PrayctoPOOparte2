@@ -20,9 +20,9 @@ class Persona {
 
     // Método para validar los datos de una persona
     public function validarDatos() {
-        // Verificar que la edad sea un número positivo y no mayor que 150 (solo como ejemplo)
-        if ($this->edad <= 0 || $this->edad > 150) {
-            echo "La edad debe ser un número positivo y no mayor que 150.\n";
+        // Verificar que la edad sea un número positivo y no mayor que 125 (La persona con mas edad en la historia es de 125 años)
+        if ($this->edad <= 0 || $this->edad > 125) {
+            echo "La edad debe ser un número positivo y no mayor que 125.\n";
             return false;
         }
         
@@ -33,16 +33,16 @@ class Persona {
         }
 
         // Verificar que el sexo sea "Masculino" o "Femenino"
-        if ($this->sexo !== "Masculino" && $this->sexo !== "Femenino") {
+        if ($this->sexo !== "Masculino" && $this->sexo !== "Femenino" && $this->sexo !== "masculino" && $this->sexo !== "femenino") {
             echo "El sexo debe ser 'Masculino' o 'Femenino'.\n";
             return false;
         }
 
-        // Verificar que el teléfono tenga 8 dígitos numéricos
+        /*// Verificar que el teléfono tenga 8 dígitos numéricos
         if (strlen($this->telefono) != 8 || !is_numeric($this->telefono)) {
             echo "El teléfono debe tener 8 dígitos numéricos.\n";
             return false;
-        }
+        }*/  //NO es necesario validar el numero de telefono ya que este es opcional para generar una denuncia.
 
         // Si todas las validaciones pasan, retornar true
         return true;
