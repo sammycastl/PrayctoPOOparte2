@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action'])) {
     echo "¡Bienvenido al sistema de denuncias!";
     exit;
 } else {
+     // prueba para commits parte 2 porque el anterior no dio
     // Mostrar una página de error si la ruta solicitada no existe
     echo "Error 404: Página no encontrada";
 }
